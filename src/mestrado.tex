@@ -1,0 +1,146 @@
+%%
+%% This is file `example.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% coppe.dtx  (with options: `example')
+%% 
+%% This is a sample monograph which illustrates the use of `coppe' document
+%% class and `coppe-unsrt' BibTeX style.
+%% 
+%% \CheckSum{1417}
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%%
+\documentclass[msc,numbers]{coppe}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+
+\makelosymbols
+\makeloabbreviations
+
+\begin{document}
+  \title{Estudo dos efeitos da corrente do brasil nas ondas da regi\~ao sul-sudeste}
+  \foreigntitle{Study of brazil current effects on ocean waves within southeastern region}
+  \author{Adriano}{Wiermann Barroso}
+  \advisor{Prof.}{Nelson}{Violante}{D.Sc.}
+  \advisor{Prof.}{Pedro}{Veras Guimar\~aes}{Ph.D.}
+
+  \examiner{Prof.}{Claudio Neves}{D.Sc.}
+
+  \department{PENO}
+  \date{03}{2019}
+
+  \keyword{Primeira palavra-chave}
+  \keyword{Segunda palavra-chave}
+  \keyword{Terceira palavra-chave}
+
+  \maketitle
+
+  \dedication{A algu\'em cujo valor \'e digno desta dedicat\'oria.}
+
+  \chapter*{Agradecimentos}
+
+  Gostaria de agradecer a todos.
+
+  \begin{abstract}
+
+  	Esta disserta{\c c}\~ao tem como principal objetivo investigar a influ\^encia que a Corrente do Brasil (CB) possui no campo de ondas na costa sul-sudeste e quantificar o grau de impacto que a corrente causa no campo de ondas gravitacionais de escala regional.
+
+  A an\'alise e modelagem num\'erica de correntes oce\^anicas e ondas foram historicamente desenvolvidas separadamente. No entanto, \'e bem conhecido os efeitos de correntes superficiais nas ondas, muitos trabalhos j\'a investigaram os efeitos que ocorrem nas ondas quando estas est\~ao sujeitas a um campo de correntes em escalas laboratoriais. Trabalhos que fizeram essa an\'alise em escala oce\^anica s\~ao mais escassos.
+	No Brasil a CB de contorno oeste se origina em latitudes pr\'oximas a 15$^o $S flui em dire{\c c}\~ao ao sul at\'e a regi\~ao da conflu\^encia brasil-malvinas pr\'oximo de 28$^o $S, ela se intensifica a medida que diminui sua latitude, com velocidades de corrente que alcan{\c c}am a ordem de 1 $m s^{-1}$ \citep{DaSilveira2008} e com intensa atividade de mesoescala muito reportada na literatura.
+
+  A forma de intera{\c c}\~ao   de correntes com as ondas \'e atrav\'es da tens\~ao de radia{\c c}\~ao que principalmente em casos em que o gradiente do campo de corrente n\~ao for zero, ou seja n\~ao uniforme, ocorre maior troca de energia entre as ondas e a corrente atrav\'es dos termos de fluxo de momento \citep{Crapper1984}. Os principais casos em que este gradiente \'e diferente de zero em correntes contorno oeste ocorre nas instabilidades da corrente como meandros e v\'ortices da corrente.
+
+  Apesar da exist\^encia de uma corrente de contorno oeste intensa e com atividade de mesoescala conhecida, ainda n\~ao h\'a na literatura estudos que investigem a influ\^encia da CB no campo de ondas na regi\~ao sul-sudeste. O clima de ondas nesta regi\~ao \'e muito caracter\'istico com persist\^encia das vagas de nordeste geradas pelo AAS (Anticiclone do Atl\^antico Sul) e a chegada de algumas ondula{\c c}\~oes de sudoeste com longos per\'iodos oriundas de ciclones extratropicais, apresentando a bimodalidade do mar muito constante na regi\~ao \citep{Ricardo2009}.
+
+  No estudo recente de \citet{Ardhuin2017} eles analisaram a influ\^encia da corrente do Golfo no campo de ondas. Pode-se verificar uma grande diferen{\c c}a no campo de ondas nas simula{\c c}\~oes com (\autoref{fig:fabrice}a) e sem corrente Golfo
+
+  \end{abstract}
+
+  \begin{foreignabstract}
+		Abstract here...
+  \end{foreignabstract}
+
+  \tableofcontents
+  \listoffigures
+  \listoftables
+  \printlosymbols
+  \printloabbreviations
+
+  \mainmatter
+  \chapter{Introdu{\c c}\~ao}
+
+  Segundo a norma de formata{\c c}\~ao de teses e disserta{\c c}\~oes do
+  Instituto Alberto Luiz Coimbra de P\'os-gradua{\c c}\~ao e Pesquisa de
+  Engenharia (COPPE), toda abreviatura deve ser definida antes de
+  utilizada.\abbrev{COPPE}{Instituto Alberto Luiz Coimbra de P\'os-gradua{\c
+  c}\~ao e Pesquisa de Engenharia}
+
+  Do mesmo modo, \'e imprescind\'ivel definir os s\'imbolos, tal como o
+  conjunto dos n\'umeros reais $\mathbb{R}$ e o conjunto vazio $\emptyset$.
+  \symbl{$\mathbb{R}$}{Conjunto dos n\'umeros reais}
+  \symbl{$\emptyset$}{Conjunto vazio}
+
+  \chapter{Revis\~ao Bibliogr\'afica}
+
+  Para ilustrar a completa ades\~ao ao estilo de cita{\c c}\~oes e listagem de
+  refer\^encias bibliogr\'aficas, a Tabela~\ref{tab:citation} apresenta cita{\c
+  c}\~oes de alguns dos trabalhos contidos na norma fornecida pela CPGP da
+  COPPE, utilizando o estilo num\'erico.
+
+  \begin{table}[h]
+  \caption{Exemplos de cita{\c c}\~oes utilizando o comando padr\~ao
+    \texttt{\textbackslash cite} do \LaTeX\ e
+    o comando \texttt{\textbackslash citet},
+    fornecido pelo pacote \texttt{natbib}.}
+  \label{tab:citation}
+  \centering
+  {\footnotesize
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Tipo da Publica{\c c}\~ao & \verb|\cite| & \verb|\citet|\\
+    \hline
+    Livro & \cite{book-example} & \citet{book-example}\\
+    Artigo & \cite{article-example} & \citet{article-example}\\
+    Relat\'orio & \cite{techreport-example} & \citet{techreport-example}\\
+    Relat\'orio & \cite{techreport-exampleIn} & \citet{techreport-exampleIn}\\
+    Anais de Congresso & \cite{inproceedings-example} &
+      \citet{inproceedings-example}\\
+    S\'eries & \cite{incollection-example} & \citet{incollection-example}\\
+    Em Livro & \cite{inbook-example} & \citet{inbook-example}\\
+    Disserta{\c c}\~ao de mestrado & \cite{mastersthesis-example} &
+      \citet{mastersthesis-example}\\
+    Tese de doutorado & \cite{phdthesis-example} & \citet{phdthesis-example}\\
+    \hline
+  \end{tabular}}
+  \end{table}
+
+  \chapter{M\'etodo Proposto}
+  \chapter{Resultados e Discuss\~oes}
+  \chapter{Conclus\~oes}
+
+  \backmatter
+  \bibliographystyle{coppe-unsrt}
+  \bibliography{example}
+
+  \appendix
+  \chapter{Algumas Demonstra{\c c}\~oes}
+\end{document}
+%% 
+%%
+%% End of file `example.tex'.
