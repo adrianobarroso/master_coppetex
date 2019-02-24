@@ -389,8 +389,8 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \newenvironment{abstract}{%
   \clearpage
   \thispagestyle{plain}
-  % \abstract@toptext\par
-  % \vspace*{8.6mm}
+  \abstract@toptext\par
+  \vspace*{8.6mm}
   \begin{center}
     \sloppy\nohyphens{\MakeUppercase\local@title}\par
     \vspace*{13.2mm}

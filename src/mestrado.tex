@@ -28,6 +28,7 @@
 %%
 \documentclass[msc,numbers]{coppe}
 \usepackage{amsmath,amssymb}
+\usepackage[table]{xcolor}
 \usepackage{hyperref}
 
 \makelosymbols
@@ -37,8 +38,8 @@
   \title{Estudo dos efeitos da corrente do brasil nas ondas da regi\~ao sul-sudeste}
   \foreigntitle{Study of brazil current effects on ocean waves within southeastern region}
   \author{Adriano}{Wiermann Barroso}
-  \advisor{Prof.}{Nelson}{Violante}{D.Sc.}
-  \advisor{Prof.}{Pedro}{Veras Guimar\~aes}{Ph.D.}
+  \advisor{Prof.}{Nelson}{Violante Carvalho}{D.Sc.}
+  \advisor{Ph.D.}{Pedro}{Veras Guimar\~aes}{Ph.D.}
 
   \examiner{Prof.}{Claudio Neves}{D.Sc.}
 
@@ -58,23 +59,18 @@
   Gostaria de agradecer a todos.
 
   \begin{abstract}
-
-    Os estudos de modelagem num\'erica de correntes oce\^anicas e ondas foram historicamente desenvolvidos separadamente. 
-    No entanto, \'e bem conhecido os efeitos de correntes superficiais nas ondas, muitos trabalhos j\'a investigaram os 
-    efeitos que ocorrem nas ondas quando estas est\~ao sujeitas a um campo de correntes em escalas laboratoriais. 
-    Trabalhos que fizeram essa an\'alise em escala oce\^anica s\~ao mais escassos.
     
-    Esta disserta{\c c}\~ao tem como principal objetivo investigar a influ\^encia que a Corrente do Brasil (CB) possui no 
-    campo de ondas na costa sul-sudeste e quantificar o grau dessa influ\^ncia. Para isso foram feitas simulac\~oes 
-    num\'ericas com o modelo de ondas Wave Watch III com dados de campo de corrente superficiais provenientes do modelo Hycom.
-    Foram escolhidos eventos de alta instabilidade da CB para serem analisados com mais aprofundamento. 
+    Os efeitos de correntes superficiais em ondas s\~ao amplamente conhecidos, quando estas 
+    est\~ao sujeitas a um campo de correntes existe uma troca de energia entre a onda
+    e a corrente. Em casos de alto cizalhamento horizontal do campo de corrente \'e
+    mais not\'avel estes efeitos. O presente trabalho tem como principal objetivo 
+    analisar o efeito da Corrente do Brasil no campo de ondas na regi\~ao sul-sudeste
+    do Brasil. Para isso foram escolhidos alguns eventos para estudo de caso em que 
+    a Corrente do Brasil apresentava estruturas de mesoescala (meandros e v\'ortices).
+    Estes eventos foram simulados atrav\'es de modelagem num\'erica com o modelo de ondas
+    Wave Watch III com o campo de correntes provenientes do modelo Hycom. Foram empregadas
+    simula{\c c}\~oes com e sem o campo de correntes afim de verificar os impactos.
     
-    A forma de intera{\c c}\~ao de correntes com as ondas \'e atrav\'es da tens\~ao de radia{\c c}\~ao que principalmente 
-    em casos em que o gradiente do campo de corrente n\~ao for zero, ou seja n\~ao uniforme, ocorre maior troca de energia 
-    entre as ondas e a corrente atrav\'es dos termos de fluxo de momento. Os principais casos em que 
-    este gradiente \'e diferente de zero em correntes contorno oeste ocorre nas instabilidades da corrente como meandros 
-    e v\'ortices da corrente.
-
   \end{abstract}
 
   \begin{foreignabstract}
@@ -89,17 +85,23 @@
 
   \mainmatter
   \chapter{Introdu{\c c}\~ao}
-
-  Segundo a norma de formata{\c c}\~ao de teses e disserta{\c c}\~oes do
-  Instituto Alberto Luiz Coimbra de P\'os-gradua{\c c}\~ao e Pesquisa de
-  Engenharia (COPPE), toda abreviatura deve ser definida antes de
-  utilizada.\abbrev{COPPE}{Instituto Alberto Luiz Coimbra de P\'os-gradua{\c
-  c}\~ao e Pesquisa de Engenharia}
-
-  Do mesmo modo, \'e imprescind\'ivel definir os s\'imbolos, tal como o
-  conjunto dos n\'umeros reais $\mathbb{R}$ e o conjunto vazio $\emptyset$.
-  \symbl{$\mathbb{R}$}{Conjunto dos n\'umeros reais}
-  \symbl{$\emptyset$}{Conjunto vazio}
+  
+  Os estudos de modelagem num\'erica de correntes oce\^anicas e ondas foram historicamente desenvolvidos separadamente. 
+  No entanto, \'e bem conhecido os efeitos de correntes superficiais em ondas, muitos trabalhos j\'a investigaram os 
+  efeitos que ocorrem nas ondas quando estas est\~ao sujeitas a um campo de correntes em escalas laboratoriais. 
+  Trabalhos que fizeram essa an\'alise em escala oce\^anica s\~ao mais escassos.
+  
+  Esta disserta{\c c}\~ao tem como principal objetivo investigar a influ\^encia que a Corrente do Brasil (CB) possui no 
+  campo de ondas na costa sul-sudeste. Para isso foram feitas simulac\~oes 
+  num\'ericas com o modelo de ondas Wave Watch III com dados de campo de corrente superficiais provenientes do modelo Hycom.
+  Foram escolhidos eventos de alta instabilidade da CB para serem analisados.
+  
+  A forma de intera{\c c}\~ao de correntes com as ondas \'e atrav\'es da tens\~ao de radia{\c c}\~ao que principalmente 
+  em casos em que o gradiente do campo de corrente n\~ao for zero, ou seja n\~ao uniforme, ocorre maior troca de energia 
+  entre as ondas e a corrente atrav\'es dos termos de fluxo de momento. Os principais casos em que 
+  este gradiente \'e diferente de zero em correntes contorno oeste ocorre nas instabilidades da corrente como meandros 
+  e v\'ortices da corrente.
+  
 
   \chapter{Revis\~ao Bibliogr\'afica}
 
@@ -141,7 +143,8 @@
 
   \backmatter
   \bibliographystyle{coppe-unsrt}
-  \bibliography{example}
+  %\bibliographystyle{apa}
+  \bibliography{mestrado}
 
   \appendix
   \chapter{Algumas Demonstra{\c c}\~oes}
