@@ -269,15 +269,33 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \vspace*{8mm}
   \noindent\local@approvedname:\par
      \begin{center}
-  \begin{flushright}
-        \count1=0
-        \@whilenum \count1<\@examiner \do {
+        \begin{flushright}
             \vskip26\p@ \baselineskip12pt
-        \eqparbox{signture@list}{\hrulefill}\\
-        \eqparbox{signture@list}{\protect\centering%
-            \ \ \ \csname CoppeExaminer:\the\count1 \endcsname\ \ \ }\\
-            \advance\count1 by 1}
-  \end{flushright}
+            \vskip26\p@ \baselineskip12pt
+            \eqparbox{signture@list}{\hrulefill}\\
+            \eqparbox{signture@list}{ 
+                \ \ \ Prof. Nelson Violante Carvalho, D. Sc. \ \ }
+            \par
+            
+            \vskip26\p@ \baselineskip12pt
+            \eqparbox{signture@list}{\hrulefill}\\
+            \eqparbox{signture@list}{ 
+                \ \ \ Prof. Claudio Neves, D. Sc. \ \ }
+            \par
+            
+            \vskip26\p@ \baselineskip12pt
+            \eqparbox{signture@list}{\hrulefill}\\
+            \eqparbox{signture@list}{ 
+                \ \ \ Oc. Pedro Veras Guimaraes, Phd. \ \ }
+            \par
+              % \count1=0
+              % \@whilenum \count1<\@examiner \do {
+              %     \vskip26\p@ \baselineskip12pt
+              % \eqparbox{signture@list}{\hrulefill}\\
+              % \eqparbox{signture@list}{\protect\centering%
+              %     \ \ \ \csname CoppeExaminer:\the\count1 \endcsname\ \ \ }\\
+              %     \advance\count1 by 1}
+        \end{flushright}
      \end{center}
   \vspace*{\fill}
   \frontpage@bottomtext}
