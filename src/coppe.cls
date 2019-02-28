@@ -161,7 +161,10 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 }
 \newcount\@examiner\@examiner0
 \newcommand\examiner[3]{%
-  \global\@namedef{CoppeExaminer:\expandafter\the\@examiner}{#1\ #2, #3}
+  \global\@namedef{CoppeExaminerTitle:\expandafter\the\@examiner}{#1}
+  \global\@namedef{CoppeExaminerName:\expandafter\the\@examiner}{#2}
+  \global\@namedef{CoppeExaminerSurname:\expandafter\the\@examiner}{#3}
+  % \global\@namedef{CoppeExaminer:\expandafter\the\@examiner}{#1\ #2, #3}
   \global\advance\@examiner by 1
 }
 \renewcommand\author[2]{%
@@ -270,31 +273,34 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \noindent\local@approvedname:\par
      \begin{center}
         \begin{flushright}
-            \vskip26\p@ \baselineskip12pt
-            \vskip26\p@ \baselineskip12pt
+            % \vskip26\p@ \baselineskip12pt
+            % \vskip26\p@ \baselineskip12pt
+            % \eqparbox{signture@list}{\hrulefill}\\
+            % \eqparbox{signture@list}{ 
+            %     \ \ \ Prof. Nelson Violante Carvalho, D. Sc. \ \ }
+            % \par
+            % 
+            % \vskip26\p@ \baselineskip12pt
+            % \eqparbox{signture@list}{\hrulefill}\\
+            % \eqparbox{signture@list}{ 
+            %     \ \ \ Prof. Claudio Neves, D. Sc. \ \ }
+            % \par
+            % 
+            % \vskip26\p@ \baselineskip12pt
+            % \eqparbox{signture@list}{\hrulefill}\\
+            % \eqparbox{signture@list}{ 
+            %     \ \ \ Oc. Pedro Veras Guimaraes, Phd. \ \ }
+            % \par
+            \count1=0
+            \@whilenum \count1<\@examiner \do {
+                \vskip26\p@ \baselineskip12pt
             \eqparbox{signture@list}{\hrulefill}\\
-            \eqparbox{signture@list}{ 
-                \ \ \ Prof. Nelson Violante Carvalho, D. Sc. \ \ }
-            \par
-            
-            \vskip26\p@ \baselineskip12pt
-            \eqparbox{signture@list}{\hrulefill}\\
-            \eqparbox{signture@list}{ 
-                \ \ \ Prof. Claudio Neves, D. Sc. \ \ }
-            \par
-            
-            \vskip26\p@ \baselineskip12pt
-            \eqparbox{signture@list}{\hrulefill}\\
-            \eqparbox{signture@list}{ 
-                \ \ \ Oc. Pedro Veras Guimaraes, Phd. \ \ }
-            \par
-              % \count1=0
-              % \@whilenum \count1<\@examiner \do {
-              %     \vskip26\p@ \baselineskip12pt
-              % \eqparbox{signture@list}{\hrulefill}\\
-              % \eqparbox{signture@list}{\protect\centering%
-              %     \ \ \ \csname CoppeExaminer:\the\count1 \endcsname\ \ \ }\\
-              %     \advance\count1 by 1}
+           \eqparbox{signture@list}{
+            \ \hspace{2em}\csname CoppeExaminerTitle:\the\count1 \endcsname
+            \ \csname CoppeExaminerName:\the\count1 \endcsname,
+            \ \csname CoppeExaminerSurname:\the\count1 \endcsname
+            }\\
+            \advance\count1 by 1}
         \end{flushright}
      \end{center}
   \vspace*{\fill}
