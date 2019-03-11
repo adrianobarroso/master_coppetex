@@ -94,7 +94,7 @@
   
   Segundo conclus\~oes de \citet{Holthuijsen} em oceano aberto os efeitos locais das correntes podem ser consider\'aveis, por conta dos processos de gera{\c c}\~ao e dissipa{\c c}\~ao de onda serem mais afetados nessa regi\~ao.
 	 
-	A forma de intera{\c c}\~ao	de correntes com as ondas \'e atrav\'es da tens\~ao de radia{\c c}\~ao e em casos que o cisalhamento horizontal do campo de corrente \'e diferente de 0, ou seja n\~ao uniforme, ocorre maior troca de energia entre as ondas e a corrente atrav\'es dos termos de fluxo de momento \citet{Crapper1984}. Os principais locais em que este gradiente \'e diferente de zero s\~ao em correntes de contorno oeste pois devido a sua maior intensidade ocorre um maior cizalhamento horizontal do campo de corrente que faz com que instabilidades como meandros e v\'ortices ocorram com maior frequ\^encia.
+	A forma de intera{\c c}\~ao	de correntes com as ondas \'e atrav\'es de alguns mecanismos como a intera{\c c}\~ao dos fluxos de momento da corrente e da onda devida a gradientes da tens\~ao de radia{\c c}\~ao) e em casos que o cisalhamento horizontal do campo de corrente \'e diferente de 0, ou seja n\~ao uniforme, ocorre maior troca de energia entre as ondas e a corrente atrav\'es destes termos de fluxo de momento \citet{Crapper1984}. Os principais locais em que este gradiente \'e diferente de zero s\~ao em correntes de contorno oeste pois devido a sua maior intensidade ocorre um maior cizalhamento horizontal do campo de corrente que faz com que instabilidades como meandros e v\'ortices ocorram com maior frequ\^encia.
 	
 	A Corrente do Brasil (CB)\abbrev{CB}{Corrente do Brasil}, corrente de contorno oeste se origina em latitudes pr\'oximas a 15$^o $S flui em dire{\c c}\~ao ao sul at\'e a regi\~ao da conflu\^encia brasil-malvinas pr\'oximo de 28$^o $S onde retroflete em dire{\c c}\~ao a \'Africa, ela se intensifica a medida que flui para baixas latitudes, com velocidades de corrente que alcan{\c c}am a ordem de 1 $m s^{-1}$ \citet{DaSilveira2008} e com intensa atividade de mesoescala reportada na literatura \citet{MILL201527}, \citet{Soutelino2011}, \citet{Mano2009}, \citet{Castelao2006}, \citet{Rodrigues2001}, \citet{Edmo2006}, \citet{Schmid95}, \citet{SIGNORINI1978481} e \citet{Mascarenhas}. Como pode ser visto na (\autoref{fig:vortice_corrente_brasil}).
   
@@ -106,11 +106,13 @@
 		\centering
 	\end{figure}
 	
-  \vspace{2 cm}
+  % \vspace{2 cm}
   
-	Apesar da exist\^encia de uma corrente de contorno oeste intensa e com atividade de mesoescala conhecida, ainda n\~ao h\'a na literatura estudos que investiguem a influ\^encia da CB no campo de ondas na regi\~ao sul-sudeste. 
+	Apesar da exist\^encia de uma corrente de contorno oeste intensa e com atividade de mesoescala conhecida, ainda n\~ao h\'a na literatura estudos que investiguem a influ\^encia da CB\abbrev{CB}{Corrente do Brasil} no campo de ondas na regi\~ao sul-sudeste.
   
-  O clima de ondas nesta regi\~ao \'e muito caracter\'istico com persist\^encia das vagas do quadrante leste geradas pelo AAS (Anticiclone do Atl\^antico Sul)\abbrev{AAS}{Anticiclone do Atl\^antico Sul} e a chegada de ondula{\c c}\~oes do quadrante sul com longos per\'iodos oriundas de ciclones extratropicais, apresentando a bimodalidade do mar (\autoref{fig:ilustracao_vagas_swell}) muito constante na regi\~ao \citet{Ricardo2009}, \citet{eloi2003}.
+  O clima de ondas nesta regi\~ao \'e muito caracter\'istico com persist\^encia de vagas do quadrante leste geradas pelo AAS (Anticiclone do Atl\^antico Sul)\abbrev{AAS}{Anticiclone do Atl\^antico Sul} e a chegada de ondula{\c c}\~oes do quadrante sul com longos per\'iodos oriundas de ciclones extratropicais, apresentando a bimodalidade do mar (\autoref{fig:ilustracao_vagas_swell}) muito constante na regi\~ao \citet{Ricardo2009}, \citet{eloi2003}.
+  
+  % \vspace{4 cm}
   
   \begin{figure}[h]
     \centering
@@ -119,8 +121,6 @@
 		\label{fig:ilustracao_vagas_swell}
 		\centering
 	\end{figure}
-  
-  \vspace{2 cm}
   
   A ocorr\^encia desses dois principais fatores: corrente intensa com atividade de mesoescala e \'area de gera{\c c}\~ao e propaga{\c c}\~ao de ondas evidenciam a regi\~ao da costa sul-sudeste do Brasil como potencial local em que a intera{\c c}\~ao onda-corrente se faz importante.
   
@@ -132,24 +132,160 @@
 		\centering
 	\end{figure}
   
-  \section{Intera{\c c}\~ao onda-corrente}
+  \chapter{Intera{\c c}\~ao Onda-Corrente}
+  
+  Neste cap\'itulo ser\~ao apresentados conceitos b\'asicos da intera{\c c}\~ao de um campo de ondas e corrente, bem como estudos encontrados na literatura atual.
+  
+  \section{Descri{\c c}\~ao das Ondas}
+  
+  O comprimento de onda $L$, \'e a dist\^ancia horizontal entre duas cristas de ondas sucessivas \autoref{fig:repre_onda}, e o per\'iodo $T$ \'e o tempo decorrente da passagem destas cristas ou mesmo das cavas. A frequ\^encia $f$ \'e o inverso do per\'iodo $(f = \frac{1}{T})$ , e a altura de onda $H$ \'e a dist\^ancia vertical entre uma crista e uma cava, sendo a amplitude, metade da altura $(a = \frac{H}{2})$. A profundidade local \'e representada por $h$, e $n$ representa a eleva{\c c}\~ao do n\'ivel do mar.
+  
+  \begin{figure}[h]
+    \centering
+		\includegraphics[height=5cm]{images/descricao_ondas.png}
+		\caption{Representa{\c c}\~ao te\'orica de uma onda.}
+		\label{fig:repre_onda}
+		\centering
+	\end{figure}
+  
+  A velocidade de propaga{\c c}\~ao ou velocidade de fase ($c$), \'e obtida atrav\'es da rela{\c c}\~ao de dispers\~ao das ondas representada por \citet{dean1991}:
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq1}
+    \omega^{2} = gk \tanh(kh)
+  \end{equation}
+  \vspace{0.5cm}
+  
+  onde $k$ \'e o n\'umero de onda $(k = \frac{2\pi}{L})$ e $\omega$ \'e a frequ\^encia angular $(\omega = \frac{2\pi}{T})$. A partir deles podemos representar a velocidade de fase ($c$) desta forma:
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq2}
+    c = \frac{L}{T} = \frac{\omega}{k}
+  \end{equation}
+  \vspace{0.5cm}
+  
+  e substituindo \ref{eq:eq1} em \ref{eq:eq2}, obtem-se:
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq3}
+    c = \sqrt{\frac{g}{k} \tanh(kh)}
+  \end{equation}
+  \vspace{0.5cm}
+  
+  Essa defini{\c c}\~ao da velocidade de fase ($c$) \'e importante pois nos demonstra, em \'aguas profundas ($\tanh(kh) \rightarrow 1$), que a velocidade de uma onda esta diretamente ligada ao seu comprimento $L$ que esta tamb\'em diretamente ligado ao seu per\'iodo $T$, pois substituindo os valores de $k$ e $\omega$ em \ref{eq:eq1}, obtém-se:
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq4}
+    L = \frac{gT^{2}}{2\pi} \hspace{1 cm}  ou \hspace{1 cm} L \approx 1.56T^{2}
+  \end{equation}
+  \vspace{0.5cm}
+  
+  Sendo assim, ondas com per\'iodos diferentes se propagam em velocidades de fase diferentes. E portanto, pela \ref{eq:eq3} ondas longas de maior per\'iodo se propagam mais r\'apido que ondas curtas. Isso faz com que um campo de ondas sendo gerado se organize em grupos de onda \autoref{fig:velocidade_grupo_hoj}.
+
+  \begin{figure}[h]
+    \centering
+		\includegraphics[height=7cm]{images/velocidade_grupo_hoj.png}
+		\caption{Imagem retirada do livro de \citet{holthuijsen_2007}. Duas ondas harm\^onicas com frequ\^encias diferentes (ou n\'umero de onda) se somam criando grupos de ondas.}
+		\label{fig:velocidade_grupo_hoj}		
+	\end{figure}
+  
+  Esse grupo de ondas possui tamb\'em uma velocidade chamada de velocidade de grupo \ref{eq:eq1}($c_{grupo} = c_g$).
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq5}
+    c_g = \frac{\partial\omega}{\partial{k}} = nc
+  \end{equation}
+  \vspace{0.5cm}
+  
+  Em que $c$ \'e a velocidade de fase da onda e $n$ \'e:
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq6}
+    n = \frac{1}{2} \left( 1 + \frac{2kh}{\sinh(2kh)} \right)
+  \end{equation}
+  \vspace{0.5cm}
+  
+  Que em \'aguas profundas se transforma em $c_{g} = \frac{1}{2}c$ pois $n = \frac{1}{2}$, ou seja a velocidade de grupo \'e metade da velocidade de uma onda individual.
+  
+  Enquanto as ondas viajam atrav\'es do oceano elas carregam energia com elas. S\~ao dois reservat\'orios de energia que comp\~oe a energia total, s\~ao eles a energia cin\'etica e potencial, essas duas compenentes estao representadas na \autoref{eq:eq7} derivadas a partir de aproxima{\c c}\~oes da teoria linear de onda, em que $\rho$ \'e densidade por unidade de massa e $g$ \'e a for{\c c}a da gravidade ($\thicksim9.89 m s^-2$).
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq7}
+    E_{cinetica} = \frac{1}{4}\rho g a^2 \hspace{0.5 cm} ; \hspace{0.5 cm} E_{potencial} = \frac{1}{4}\rho g a^2 \hspace{0.5 cm} 
+  \end{equation}
+  \vspace{0.5cm} 
+  
+  Seguindo o desenvolvimento de \citet{holthuijsen_2007} temos que a energia total \'e $E = E_{cinetica} + E_{potencial}$ o que resulta na \autoref{eq:eq8}.
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq8}
+      E = \frac{1}{2}\rho g a^2
+  \end{equation}
+  \vspace{0.5cm}
+  
+  E que o transporte dessa energia por unidade tempo e de crista integrado na vertical \'e,
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq9}
+    P_{energia} \hspace{0.25cm} \approx \hspace{0.25cm} \overline{\int_{-h}^{0} (p_{onda} u_x)dz} \hspace{0.25cm} = \hspace{0.25cm} (\frac{1}{2} \rho g a^2) \hspace{0.1cm} \frac{1}{2}\left( 1 + \frac{2kh}{\sinh(2hh)} \right)
+  \end{equation}
+  \vspace{0.5cm} 
+  
+  sendo que a partir da \autoref{eq:eq8} e $c = \frac{\omega}{k}$ temos:
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq10}
+    P_{energia} = Enc \hspace{0.5cm} com \hspace{0.5cm} n = \frac{1}{2}\left( 1 + \frac{2kh}{\sinh(2hh)} \right)
+  \end{equation}
+  \vspace{0.5cm} 
+  
+  Essa defini{\c c}\~ao \'e importante pois demonstra que a energia se propaga junto com a velocidade de grupo $c_g$ \ref{eq:eq5}.
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq11}
+    P_{energia} = Ec_g
+  \end{equation}
+  \vspace{0.5cm}
+  
+  A \autoref{eq:eq11} descreve o transporte de energia de uma onda. No entanto, o que acontece efetivamente no oceano \'e que temos $n$ ondas que se sobrepujam umas as outras com alturas, frequ\^encias e dire{\c c}\~oes diferentes ao mesmo tempo \autoref{fig:wave_state}. 
+  
+  \begin{figure}[h]
+    \centering
+		\includegraphics[height=8cm]{images/wave_state.png}
+		\caption{Reconstru{\c c}\~ao de um dado estado de mar a partir da superposi{\c c}\~ao de v\'arias ondas cada uma com seu comprimento e dire{\c c}\~ao pr\'oprias. Imagem retirada do livro \citet{Ardhuin2016}.}
+		\label{fig:wave_state}
+	\end{figure}
+  
+  Por isso para representar este estado do mar utilizamos o conceito de espectro de onda que \'e basicamente uma decomposi{\c c}\~ao da eleva{\c c}\~ao do nivel do mar a partir da analise de S\'eries de Fourier em componentes sinusoidais sobrepostas, ou seja, um somat\'orio das componentes harm\^onicas das ondas registradas. Este somat\'orio de onda e seu formato pode ser descrito como:
+  
+  \vspace{0.5cm}
+  \begin{equation}\label{eq:eq12}
+    E(f) \approx g^2f
+  \end{equation}
+  \vspace{0.5cm}
+  % e a partir de an\'alise de s\'eries de Fourier
+  
+  Essa descri{\c c}\~ao se faz necess\'aria pois o modelo num\'erico utilizado no presente estudo utiliza o par\^ametro de energia para suas integra{\c c}\~oes num\'ericas e propaga{\c c}\~ao das ondas.
+  
+  \vspace{2cm}
+  
+  ... Falar da dispersao e da velocidade de grupo para depois falar da propagacao de energia que a forma de calcular a propacao de onda em modelos de onda. ...
+  
+  \vspace{5cm}
   
   No estudo recente de \citet{Ardhuin2017} eles analisaram a influ\^encia da corrente do Golfo no campo de ondas. Pode-se verificar uma grande diferen{\c c}a no campo de ondas nas simula{\c c}\~oes com (\autoref{fig:fabrice}a) e sem corrente Golfo (\autoref{fig:fabrice}b).
   
 	\begin{figure}[h]
+    \centering
 		\includegraphics[height=14cm]{images/fabrice_hs.png}
 		\caption{Imagem retirada do artigo citado. Impacto da corrente do Golfo nas ondas do tipo swell em 18 de Setembro de 2014, 6:00 UTC. Mapas de (a) altura de onda modelada com corrente, (b) altura de onda do modelo sem corrente, (c) corrente de alta resolu{\c c}\~ao do ROMS (d) mesma corrente filtrada. (e,f) diferen{\c c}a na altura de onda para (e) caso com corrente de alta resolu{\c c}\~ao menos caso sem corrente e (f) caso com corrente de alta resolu{\c c}\~ao menos caso com corrente filtrada. A \'area pontilhada refere-se a regi\~ao usada para an\'alise espectral.}
 		\label{fig:fabrice}
-		\centering
 	\end{figure}
+
+  \chapter{M\'etodo Proposto}
+    
+  Foram feitas simulac\~oes num\'ericas com o modelo de ondas Wave Watch III com dados de campo de corrente superficiais provenientes do modelo Hycom. Foram escolhidos eventos de alta instabilidade da CB para serem analisados.
   
-  \chapter{Revis\~ao Bibliogr\'afica}
-
-  Para ilustrar a completa ades\~ao ao estilo de cita{\c c}\~oes e listagem de
-  refer\^encias bibliogr\'aficas, a Tabela~\ref{tab:citation} apresenta cita{\c
-  c}\~oes de alguns dos trabalhos contidos na norma fornecida pela CPGP da
-  COPPE, utilizando o estilo num\'erico.
-
   \begin{table}[h]
   \caption{Exemplos de cita{\c c}\~oes utilizando o comando padr\~ao
     \texttt{\textbackslash cite} do \LaTeX\ e
@@ -176,10 +312,14 @@
     \hline
   \end{tabular}}
   \end{table}
-
-  \chapter{M\'etodo Proposto}
     
-  Foram feitas simulac\~oes num\'ericas com o modelo de ondas Wave Watch III com dados de campo de corrente superficiais provenientes do modelo Hycom. Foram escolhidos eventos de alta instabilidade da CB para serem analisados.
+  \begin{itemize}
+		\item Coeficiente de Correla{\c c}\~ao (r):
+		\begin{equation}\label{eq:teste}
+			r = \frac{\sum_{i=1}^n (m_i - \bar{m})(o_i - \bar{o})}
+							 {\sqrt{ \left(\sum_{i=1}^n (m_i - \bar{m})^2 \sum_{i=1}^n (o_i - \bar{o})^2 \right)}}
+		\end{equation}
+	\end{itemize}
   
   \chapter{Resultados e Discuss\~oes}
   \chapter{Conclus\~oes}
