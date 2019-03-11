@@ -14,7 +14,7 @@
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
 %%   Digits        \0\1\2\3\4\5\6\7\8\9
-%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#https://www.overleaf.com/project/5c864709d9369c09686884d3
 %%   Dollar        \$     Percent       \%     Ampersand     \&
 %%   Acute accent  \'     Left paren    \(     Right paren   \)
 %%   Asterisk      \*     Plus          \+     Comma         \,
@@ -27,27 +27,51 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \documentclass[msc,numbers]{coppe}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
 \usepackage{amsmath,amssymb}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{bm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% some review tools
+\usepackage{todonotes}
+\usepackage{changes}
+%\usepackage[disable]{todonotes} % to hide all todonotes
+%\usepackage[final]{changes} % to hide all changes
+
+% For Pedro G.
+\definechangesauthor[color=orange]{PG}
+\newcommand{\Padd}[1]{\added[id=PG]{#1}}
+\newcommand{\Prm}[1]{\deleted[id=PG]{#1}}
+\newcommand{\Pcm}[1]{\todo[color=orange!30]{PG: #1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \makelosymbols
 \makeloabbreviations
 
 \begin{document}
-  \title{Estudo dos efeitos da corrente do brasil nas ondas da regi\~ao sul-sudeste}
-  \foreigntitle{Study of brazil current effects on ocean waves within southeastern region}
+  \title{Efeitos da corrente do Brasil na propaga\c{c}\~ao das ondas na regi\~ao sul-sudeste}
+  \foreigntitle{Brazilian current effect on the southeastern region ocean wave propagation}
+  % OU?
+  %\foreigntitle{Brazilian current effect on the ocean wave propagation at southwest Atlantic}
   \author{Adriano}{Wiermann Barroso}
   \advisor{Prof.}{Nelson}{Violante Carvalho}{D.Sc.}
 
   \examiner{Prof.}{Claudio Neves}{D.Sc.}
   \examiner{Phd.}{Pedro Veras Guimaraes}{D.Sc.}
-  \examiner{Phd.}{Pedro Veras Guimaraes}{D.Sc.}
+  \examiner{Phd.}{{\color{orange}ATENCAO NOME DUPLICADO}Pedro Veras Guimaraes}{D.Sc.}
 
   \department{PENO}
   \date{03}{2019}
 
-  \keyword{Previs\~ao de ondas}
+  \keyword{Modelagem de ondas}
   \keyword{Intera{\c c}\~ao onda-corrente}
   \keyword{Corrente do Brasil}
 
@@ -63,8 +87,10 @@
 
   \begin{abstract}
     
-    Os efeitos de correntes superficiais em ondas s\~ao amplamente conhecidos, quando estas 
-    est\~ao sujeitas a um campo de correntes existe uma troca de energia entre a onda
+    %\Padd{Os princípeos b\'asicos de intera\c{c}\~ao onda-corrente, são anteriores decada de 70 \citep{Jonsson1970,Kenyon1971}.}
+    \Prm{DEIXAR PARA DEPOIS}
+    \Prm{Os efeitos de correntes superficiais em ondas s\~ao amplamente conhecidos,}
+    \Padd{Q}uando \Padd{ondas se propagam sobre um campo de corrent,} estas est\~ao sujeitas a um campo de correntes existe uma troca de energia entre a onda
     e a corrente. Em casos de alto cizalhamento horizontal do campo de corrente \'e
     mais not\'avel estes efeitos. O presente trabalho tem como principal objetivo 
     analisar o efeito da Corrente do Brasil no campo de ondas na regi\~ao sul-sudeste
@@ -88,15 +114,37 @@
   \printloabbreviations
 
   \mainmatter
+  
+  %%%%%%%%%%%%%%%%%
+  %% INTRODUÇÃO  %%
+  %%%%%%%%%%%%%%%%%
   \chapter{Introdu{\c c}\~ao}
   
-  A an\'alise e modelagem num\'erica de correntes oce\^anicas e ondas foram historicamente desenvolvidas separadamente. No entanto, \'e bem conhecido os efeitos de correntes superficiais nas ondas, muitos trabalhos j\'a investigaram os efeitos que ocorrem nas ondas quando estas est\~ao sujeitas a um campo de correntes em larga escala. Trabalhos que fizeram essa an\'alise em sub e mesoescala s\~ao mais escassos, no entanto, regi\~oes como a corrente das Agulhas e corrente do Golfo j\'a foram estudados estes efeitos. Embora sejam os mesmos princ\'icios f\'isicos empregados, o impacto de correntes de menor escala ainda foi pouco explorado no oceano aberto \citet{Ardhuin2017}.
-  
-  Segundo conclus\~oes de \citet{Holthuijsen} em oceano aberto os efeitos locais das correntes podem ser consider\'aveis, por conta dos processos de gera{\c c}\~ao e dissipa{\c c}\~ao de onda serem mais afetados nessa regi\~ao.
-	 
-	A forma de intera{\c c}\~ao	de correntes com as ondas \'e atrav\'es de alguns mecanismos como a intera{\c c}\~ao dos fluxos de momento da corrente e da onda devida a gradientes da tens\~ao de radia{\c c}\~ao) e em casos que o cisalhamento horizontal do campo de corrente \'e diferente de 0, ou seja n\~ao uniforme, ocorre maior troca de energia entre as ondas e a corrente atrav\'es destes termos de fluxo de momento \citet{Crapper1984}. Os principais locais em que este gradiente \'e diferente de zero s\~ao em correntes de contorno oeste pois devido a sua maior intensidade ocorre um maior cizalhamento horizontal do campo de corrente que faz com que instabilidades como meandros e v\'ortices ocorram com maior frequ\^encia.
+  \Padd{Trabalhos investigando o efeito da corrente superficaila em ondas oceancas começaram a ser desernvolvidos predominantemente nos anos 60 \citep[como exemplo temos os trabalhos pioneiros de ][]{Longuet-Higgms1960,Longuet-Higgms1961}. }
+  %%%%
+  \Prm{A an\'alise e modelagem num\'erica de correntes oce\^anicas e ondas foram historicamente desenvolvidas separadamente. No entanto, \'e bem conhecido os efeitos de correntes superficiais nas ondas, muitos trabalhos j\'a investigaram os efeitos que ocorrem nas ondas quando estas est\~ao sujeitas a um campo de correntes em larga escala. Trabalhos que fizeram essa an\'alise em sub e mesoescala s\~ao mais escassos, no entanto, regi\~oes como a corrente das Agulhas e corrente do Golfo j\'a foram estudados estes efeitos. Embora sejam os mesmos princ\'icios f\'isicos empregados, o impacto de correntes de menor escala ainda foi pouco explorado no oceano aberto \citet{Ardhuin2017}.}\Pcm{Vou mover isso mais para o final e dar uma editada}
+  %%%%%
+  \Padd{Esses trabalhos consideram que para um referêncial fixo na superície do mar sobre efeito de corrente, a relação de dispersão é modificada pelo effeito Doppler. }
+%   \begin{equation}\label{eq.disp_relation}
+%   \omega = \sigma + \bm{k\cdot U}
+%   \end{equation}
+%   \Padd{em que $\omega$ representa a frequencia absoluta da onda, $\sigma = \sqrt{gk\tanh kd}$ é a frequencia relativa dada pela relação de dispersão linear, $g$ é a gravidade e $d$ é a profundidade.  }
+% 
+ \Padd{Esse efeito cria uma frequencia relativa para o observador em um referencial eureliano. O efeito Doppler na propagação de ondas oceânicas já foi amplamente estudado na literatura para largas correntes ocêanicas, um exemplo é o trabalho de \citet{Mapp1985}.  }
+
+% 
+\Padd{Na presença de correntes, as propriedades intrínsicas das ondas são modificadas. Como consequência, seus comportamento advectivo e conservativos são alterados também.
+\citet{Crapper1984} explora as interações não conservativas entre ondas e correntes dadas por meio das trocas de fluxos de momento, noqual onda e corrente de fato trocam energia de forma não linear. }
+Segundo \Prm{conclus\~oes de} \citet{Holthuijsen}, em oceano aberto, esse efeitos de modulação das correntes locais \Padd{também} podem \Padd{modificar consideravelmente a conseração de energia das ondas,} \Prm{ser consider\'aveis,} principalmente por modificarem os processos de gera{\c c}\~ao e dissipa{\c c}\~ao de onda. \Prm{serem mais afetados nessa regi\~ao}.
+	  
+%	 	  \Padd{Não obstante, \citet{Crapper1984} descreve} a forma de a intera{\c c}\~ao de correntes com as ondas \'e atrav\'es de alguns mecanismos como a intera{\c c}\~ao dos fluxos de momento da corrente e da onda devida a gradientes da tens\~ao de radia{\c c}\~ao) 
+
+\Padd{Apesar do referencial teórico já existente mostrar que os processos de interação ondas e correntes estão diretamente acoplados, a} an\'alise e modelagem num\'erica de correntes oce\^anicas e ondas \Padd{são em grande maioria tratados de forma separadas}\Prm{foram historicamente desenvolvidas separadamente}.
+Muitos trabalhos investigaram \Padd{a propação das ondas sobre } \Prm{os efeitos que ocorrem nas ondas quando estas est\~ao sujeitas a} um campo de correntes em larga escala\Pcm{Citar alguns exemplos}. \Padd{No entanto,} trabalhos que fizeram essa an\'alise em sub e mesoescala s\~ao mais escassos. \Pcm{citar quem fez o trabalho na corrente das agulhas e do Golf} investigaram regi\~oes como a corrente das Agulhas e corrente do Golfo. \Prm{ j\'a foram estudados estes efeitos.} Embora sejam os mesmos princ\'icios f\'isicos empregados, o impacto de correntes de menor escala ainda foi pouco explorado no oceano aberto \citet{Ardhuin2017}.	
 	
-	A Corrente do Brasil (CB)\abbrev{CB}{Corrente do Brasil}, corrente de contorno oeste se origina em latitudes pr\'oximas a 15$^o $S flui em dire{\c c}\~ao ao sul at\'e a regi\~ao da conflu\^encia brasil-malvinas pr\'oximo de 28$^o $S onde retroflete em dire{\c c}\~ao a \'Africa, ela se intensifica a medida que flui para baixas latitudes, com velocidades de corrente que alcan{\c c}am a ordem de 1 $m s^{-1}$ \citet{DaSilveira2008} e com intensa atividade de mesoescala reportada na literatura \citet{MILL201527}, \citet{Soutelino2011}, \citet{Mano2009}, \citet{Castelao2006}, \citet{Rodrigues2001}, \citet{Edmo2006}, \citet{Schmid95}, \citet{SIGNORINI1978481} e \citet{Mascarenhas}. Como pode ser visto na (\autoref{fig:vortice_corrente_brasil}).
+\Padd{Fenômenos de mesoescala são mais facilmente observados }\Prm{Os principais locais em que este gradiente \'e diferente de zero s\~ao} em correntes de contorno oeste pois devido a sua maior intensidade ocorre um maior cizalhamento horizontal do campo de corrente que faz com que instabilidades como meandros e v\'ortices ocorram com maior frequ\^encia\Pcm{Add referência}.
+	
+A Corrente do Brasil (CB)\abbrev{CB}{Corrente do Brasil}, \Padd{por exemplo, é uma} corrente de contorno oeste \Padd{que} se origina em latitudes pr\'oximas a 15$^o $S flui em dire{\c c}\~ao ao sul at\'e a regi\~ao da conflu\^encia brasil-malvinas pr\'oximo de 28$^o $S onde retroflete em dire{\c c}\~ao a \'Africa, ela se intensifica a medida que flui para baixas latitudes, com velocidades de corrente que alcan{\c c}am a ordem de 1 $m s^{-1}$ \citet{DaSilveira2008} e com intensa atividade de mesoescala reportada na literatura \citet{MILL201527}, \citet{Soutelino2011}, \citet{Mano2009}, \citet{Castelao2006}, \citet{Rodrigues2001}, \citet{Edmo2006}, \citet{Schmid95}, \citet{SIGNORINI1978481} e \citet{Mascarenhas}. Como pode ser visto na (\autoref{fig:vortice_corrente_brasil}).
   
   \begin{figure}[h]
     \centering
@@ -110,7 +158,7 @@
   
 	Apesar da exist\^encia de uma corrente de contorno oeste intensa e com atividade de mesoescala conhecida, ainda n\~ao h\'a na literatura estudos que investiguem a influ\^encia da CB\abbrev{CB}{Corrente do Brasil} no campo de ondas na regi\~ao sul-sudeste.
   
-  O clima de ondas nesta regi\~ao \'e muito caracter\'istico com persist\^encia de vagas do quadrante leste geradas pelo AAS (Anticiclone do Atl\^antico Sul)\abbrev{AAS}{Anticiclone do Atl\^antico Sul} e a chegada de ondula{\c c}\~oes do quadrante sul com longos per\'iodos oriundas de ciclones extratropicais, apresentando a bimodalidade do mar (\autoref{fig:ilustracao_vagas_swell}) muito constante na regi\~ao \citet{Ricardo2009}, \citet{eloi2003}.
+  O clima de ondas nesta regi\~ao \Padd{é investigado por \citet{}\Pcm{Citar algém}, por meio de modelágem numérica, sem considerar o efeito das correntes na região. Segundo o mesmo, o clima de ondas é dominado por } \Prm{\'e muito caracter\'istico com persist\^encia de} vagas do quadrante leste geradas pelo AAS (Anticiclone do Atl\^antico Sul)\abbrev{AAS}{Anticiclone do Atl\^antico Sul} e a chegada de ondula{\c c}\~oes do quadrante sul com longos per\'iodos oriundas de ciclones extratropicais, apresentando a bimodalidade do mar (\autoref{fig:ilustracao_vagas_swell}) muito constante na regi\~ao \citet{Ricardo2009}, \citet{eloi2003}. 
   
   % \vspace{4 cm}
   
@@ -122,7 +170,8 @@
 		\centering
 	\end{figure}
   
-  A ocorr\^encia desses dois principais fatores: corrente intensa com atividade de mesoescala e \'area de gera{\c c}\~ao e propaga{\c c}\~ao de ondas evidenciam a regi\~ao da costa sul-sudeste do Brasil como potencial local em que a intera{\c c}\~ao onda-corrente se faz importante.
+  %A ocorr\^encia desses dois principais fatores: corrente intensa com atividade de mesoescala e \'area de gera{\c c}\~ao e propaga{\c c}\~ao de ondas evidenciam a regi\~ao da costa sul-sudeste do Brasil como potencial local em que a intera{\c c}\~ao onda-corrente se faz importante.
+  \Padd{Devido a corrente intensa e alta atividade de mesoescala evidenciada na região sul-sudeste do Brasil, esta disseração tem o objetivo de investivar o comportamento e propagação das ondas sobre differentes estruturas de correntes. }
   
   \begin{figure}[h]
     \centering
@@ -132,6 +181,9 @@
 		\centering
 	\end{figure}
   
+  
+  
+  %%% Referencial teórico
   \chapter{Intera{\c c}\~ao Onda-Corrente}
   
   Neste cap\'itulo ser\~ao apresentados conceitos b\'asicos da intera{\c c}\~ao de um campo de ondas e corrente, bem como estudos encontrados na literatura atual.
@@ -189,7 +241,7 @@
 		\label{fig:velocidade_grupo_hoj}		
 	\end{figure}
   
-  Esse grupo de ondas possui tamb\'em uma velocidade chamada de velocidade de grupo \ref{eq:eq1}($c_{grupo} = c_g$).
+  Esse grupo de ondas possui tamb\'em uma velocidade chamada de velocidade de grupo ($c_g$, eq.\ref{eq:eq5}).
   
   \vspace{0.5cm}
   \begin{equation}\label{eq:eq5}
