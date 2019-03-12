@@ -122,7 +122,7 @@
   
   \Padd{Trabalhos investigando o efeito da corrente superficaila em ondas oceancas começaram a ser desernvolvidos predominantemente nos anos 60 \citep[como exemplo temos os trabalhos pioneiros de ][]{Longuet-Higgms1960,Longuet-Higgms1961}. }
   %%%%
-  \Prm{A an\'alise e modelagem num\'erica de correntes oce\^anicas e ondas foram historicamente desenvolvidas separadamente. No entanto, \'e bem conhecido os efeitos de correntes superficiais nas ondas, muitos trabalhos j\'a investigaram os efeitos que ocorrem nas ondas quando estas est\~ao sujeitas a um campo de correntes em larga escala. Trabalhos que fizeram essa an\'alise em sub e mesoescala s\~ao mais escassos, no entanto, regi\~oes como a corrente das Agulhas e corrente do Golfo j\'a foram estudados estes efeitos. Embora sejam os mesmos princ\'icios f\'isicos empregados, o impacto de correntes de menor escala ainda foi pouco explorado no oceano aberto \citet{Ardhuin2017}.}\Pcm{Vou mover isso mais para o final e dar uma editada}
+  % \Prm{A an\'alise e modelagem num\'erica de correntes oce\^anicas e ondas foram historicamente desenvolvidas separadamente. No entanto, \'e bem conhecido os efeitos de correntes superficiais nas ondas, muitos trabalhos j\'a investigaram os efeitos que ocorrem nas ondas quando estas est\~ao sujeitas a um campo de correntes em larga escala. Trabalhos que fizeram essa an\'alise em sub e mesoescala s\~ao mais escassos, no entanto, regi\~oes como a corrente das Agulhas e corrente do Golfo j\'a foram estudados estes efeitos. Embora sejam os mesmos princ\'icios f\'isicos empregados, o impacto de correntes de menor escala ainda foi pouco explorado no oceano aberto \citet{Ardhuin2017}.} \Pcm{Vou mover isso mais para o final e dar uma editada}
   %%%%%
   \Padd{Esses trabalhos consideram que para um referêncial fixo na superície do mar sobre efeito de corrente, a relação de dispersão é modificada pelo effeito Doppler. }
 %   \begin{equation}\label{eq.disp_relation}
@@ -336,7 +336,16 @@ A Corrente do Brasil (CB)\abbrev{CB}{Corrente do Brasil}, \Padd{por exemplo, é 
 
   \chapter{M\'etodo Proposto}
     
-  Foram feitas simulac\~oes num\'ericas com o modelo de ondas Wave Watch III com dados de campo de corrente superficiais provenientes do modelo Hycom. Foram escolhidos eventos de alta instabilidade da CB para serem analisados.
+  Para analisar efeitos da CB no campo de ondas foram feitas \textit{hindcasts} (simulac\~oes num\'ericas) com o modelo de ondas WW3\abbrev{WW3}{Wave Watch III} com e sem campo de corrente superficiais que foram provenientes do modelo Hycom\abbrev{Hycom}{Hybrid Coordinate Ocean Model}. Foram escolhidos eventos de alta instabilidade da CB para serem analisados.
+  
+  Al\'em disso foram feitas compara{\c c}\~oes com dados de boias de PNBOIA\abbrev{PNBOIA}{Programa Nacional de Boias} para o per\'iodo dos eventos modelados.
+  
+  \section{Simula{\c c}\~ao num\'erica}
+  
+  Foi feita uma simula{\c c}\~ao global com 0.5ºx0.5º de resolu{\c c}\~ao espacial durante todo o per\'iodo que compreende os eventos. Esta simula{\c c}\~ao gerou as condi{\c c}\~oes de contorno e inicias para a simula{\c c}\~ao regional que foi a utilizada para as an\'alises.
+  
+  Para ambas simula{\c c}\~oes foi utilizada a base batim\'etrica Etopo2, e como for{\c c}ante atmosf\'erica dados de vento do modelo ECMWF\abbrev{ECMWF}{European Centre for Medium-Range Weather Forecasts}, gentilmente cedidos pela MeteoFrance.  
+  
   
   \begin{table}[h]
   \caption{Exemplos de cita{\c c}\~oes utilizando o comando padr\~ao

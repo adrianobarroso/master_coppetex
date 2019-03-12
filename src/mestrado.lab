@@ -1,6 +1,11 @@
 
 \begin{theglossary}
   \makeatletter
-  \item [AAS] Anticiclone do Atl\^antico Sul, p. \hyperpage{2}
-  \item [CB] Corrente do Brasil, p. \hyperpage{1}
+  \item [AAS] Anticiclone do Atl\^antico Sul, p. \hyperpage{3}
+  \item [CB] Corrente do Brasil, p. \hyperpage{2}
+  \item [ECMWF] European Centre for Medium-Range Weather Forecasts, p. 
+		\hyperpage{10}
+  \item [Hycom] Hybrid Coordinate Ocean Model, p. \hyperpage{10}
+  \item [PNBOIA] Programa Nacional de Boias, p. \hyperpage{10}
+  \item [WW3] Wave Watch III, p. \hyperpage{10}
   \end{theglossary}
